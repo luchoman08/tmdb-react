@@ -1,4 +1,4 @@
-export default class Movie  {
+export  class Movie  {
     id: number;
     title: string;
     overview: string;
@@ -28,4 +28,7 @@ export default class Movie  {
    // credis?: { id: string, cast: Cast[], crew: Crew[] };
    // reviews?: Results<Review>;
     //translations?: Results<TranslationInterface>;
+    constructor() {
+        this.title = '';
+    }
 }

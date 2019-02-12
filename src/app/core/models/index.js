@@ -1,4 +1,4 @@
-import Gender from './Gender';
-import Person from './Person';
-export { Gender, Person };
+export * from './Person';
+export * from './Movie';
+export * from './Gender';
 

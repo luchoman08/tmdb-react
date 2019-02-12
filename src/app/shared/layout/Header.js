@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from './Header.scss';
+
+import { Separator } from '../Separator';
 import  {
     Toolbar,
     AppBar,
@@ -8,12 +9,12 @@ import  {
 
 export class Header extends Component {
     render() {
-        console.log(styles);
         return (
             <div>
                 <AppBar position='static'>
                     <Toolbar>
-                        <p className={styles.grow}>App Bar</p>
+                        App bar
+                        <Separator />
                         <Button color="inherit"> Search </Button>
                     </Toolbar>
                 </AppBar>

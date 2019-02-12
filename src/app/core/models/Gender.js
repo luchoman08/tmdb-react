@@ -1,5 +1,5 @@
 // @flow
-export default class Gender {
+export  class Gender {
     id: number;
     name: string;
 }

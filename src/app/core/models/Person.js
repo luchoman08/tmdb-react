@@ -1,6 +1,6 @@
 // @flow
-import { Gender } from './';
-export default class Person {
+import { Gender } from './Gender';
+export  class Person {
     id: number;
     name: string;
     popularity: number;
