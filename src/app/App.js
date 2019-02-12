@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import { PeopleService }  from './core/services/PeopleService';
 import { Person } from './core/models';
+import { Header } from './shared/layout';
 type Props = {
   person: Person
 }
@@ -25,6 +26,7 @@ class App extends Component<Props, State> {
 
     return (
       <div className="App">
+        <Header/>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
