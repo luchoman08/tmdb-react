@@ -6,6 +6,7 @@ import './App.scss';
 import { PeopleService, MovieService }  from './core/services/';
 import { Person, Movie } from './core/models';
 import { Header } from './shared/layout';
+import classNames from 'classnames';
 type Props = {
   person: Person,
   movie: Movie
@@ -22,6 +23,7 @@ class App extends Component<Props, State> {
     MovieService.get(8)
         .then( movie => {
           this.setState({movie: movie});
+          console.log(movie);
         });
   }
   static defaultProps: Props = {
@@ -29,12 +31,12 @@ class App extends Component<Props, State> {
     movie: new Movie()
   };
   render() {
-
+    const appLogoClass = classNames('App-logo', {'error': this.state.movie.revenue !== 0});
     return (
       <div className="App">
         <Header/>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo}  className={appLogoClass} alt="logo" />
           <p>
             Hi {this.state.person.name},  edit <code>src/App.js</code> and save to reload. The movie recomended today
             is <b>{this.state.movie.title}</b>
